@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playpen+Sans+Thai:wght@100..800&display=swap');
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+:root {
+  /* 🎨 Colores */
+  --verde-claro: #2a9d8f; 
+  --verde-oscuro: #264653;  
+  --amarillo: #e9c46a;
+  --gris: #f4f4f4;
+  --negro: #000000;
+  --blanco: #FFFFFF;     
+
+  /* 🖋 Tipografías */
+  --fuente-texto:  "Open Sans", sans-serif;
+  --fuente-titulos: "Anton", sans-serif;
+  --fuente-extra: "Playpen Sans Thai", cursive;
+
+  /* ✨ Sombra y bordes */
+  --sombra-suave: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --radio-borde: 5px;
+
+  --color-fondo-hero: linear-gradient(135deg, var(--verde-claro) 0%, var(--verde-oscuro) 100%);
+  --color-fondo-testimonial: linear-gradient(135deg, var(--amarillo) 0%, var(--verde-claro) 100%);
+}
+
+.text-heading{
+  color: var(--blanco) !important;
+  font-size: 1.2rem;
+}
+.text-contacto{
+  color: var(--verde-oscuro) !important;
+  font-size: 1.2rem;
+}
+img {
+  display: block;            /* Elimina espacios en línea y márgenes inesperados */
+  max-width: 100%;           /* Que nunca excedan el ancho de su contenedor */
+  height: auto;              /* Mantiene la proporción original */
+  object-fit: cover;         /* Recorta o ajusta la imagen si el contenedor cambia de proporción */ 
+}
+.logo-img{
+  width: 140px;
+}
+.btn-generico{
+  background-color: var(--blanco);
+  color: var(--verde-oscuro) !important;
+  font-family: var(--fuente-titulos) !important;
+  font-size: 1.4rem !important;
+  transition: background-color 0.3s ease;
+  border-radius: var(--radio-borde) !important;
+}
+
+.btn-generico:hover {
+  background-color: var(--amarillo) !important;
+  color: var(--verde-oscuro) !important;
+}
+.btn-contacto{
+  background-color: var(--verde-oscuro);
+  color: var(--blanco) !important;
+  font-family: var(--fuente-titulos) !important;
+  font-size: 1.4rem !important;
+  transition: background-color 0.3s ease;
+  border-radius: var(--radio-borde) !important;
+}
+.btn-contacto:hover {
+  background-color: var(--amarillo) !important;
+  color: var(--verde-oscuro) !important;
+}
+/* OffCanvas - para celular */
+.menu-canva li a{
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--blanco) !important;
+}
+
+.title-section{
+  font-family: var(--fuente-titulos);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: var(--verde-claro);
+}
+
+.navbar{
+  background-color: var(--blanco);
+}
+
+/* Estilos base para los enlaces del navbar */
+.uk-navbar-nav > li > a {
+  position: relative;
+  padding: 0.5rem 1rem;
+  color: var(--verde-oscuro);
+  transition: color 0.3s ease;
+}
+
+/* Línea oculta que será el “underline” animado */
+.uk-navbar-nav > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: var(--amarillo);
+  transition: width 0.3s ease;
+}
+
+/* Al pasar el mouse: color + expansión de la línea */
+.uk-navbar-nav > li:hover > a {
+  color: var(--amarillo) !important;
+  transition: color 0.3s ease;
+}
+
+.uk-navbar-nav > li:hover > a::after {
+  width: 100%;
+}
+.uk-navbar-nav li a{
+  font-family: var(--fuente-titulos) !important;
+  color: var(--verde-oscuro) !important;
+  font-size: 1.4rem !important;
+}
+.titulo{
+  font-family: var(--fuente-extra);
+}
+
+/*  Header */
+.typing-text{
+  color: var(--amarillo);
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+@media (max-width: 768px){
+  .typing-text{
+    font-size: 2.4rem;
+  }
+}
+.hero-img img{
+  width: 100%;
+}
+
+
+.uk-section-primary {
+  background: var(--color-fondo-hero) !important;
+  color: #fff;
+}
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Ejemplo de patrón */
+  opacity: 0.3; /* Muy sutil */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.uk-heading-primary {
+  font-family: var(--fuente-titulos);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+/*Proyectos*/
+.p-img img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.uk-text-lead {
+  font-family: var(--fuente-texto);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.i-servicios{
+  color: var(--verde-oscuro) !important;
+}
+.t-servicios{
+  color: var(--verde-claro);
+  text-transform: uppercase;
+}
+
+
+.uk-section-primary img {
+  width: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 100px rgba(0,0,0,0.5));
+}
+
+.uk-text-lead{
+  color: var(--verde-oscuro) !important;
+  font-size: 1rem !important;
+}
+.testimonio-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%; /* si querés que sea redonda */
+  display: block;
+}
+
+.uk-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.contenido-card {
+  flex-grow: 1;
+}
+
+
+/*Boton de WhatsApp*/
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button img {
+  width: 50px;
+  height: 50
+
+
+
+  px;
+  display: block;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+
+.footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+
+/*Página Servicios*/
+/* ANIMACIÓN DE ESCRITURA */
+.servicios-container{
+  background-color: var(--verde-claro);
+  padding: 2rem 5rem;
+  border-radius: .5rem;
+}
+@media (max-width: 768px) {
+  .servicios-container{
+    width: 90%;
+  }
+}
+.servicios-hero {
+  background-image: url('./assets/servicios-img.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.why-choose-us {
+  background: #f9f9f9;
+}
+
+.why-choose-us .uk-card {
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.why-choose-us .uk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.work-process .uk-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.work-process .uk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/*Página Porfolio*/
+.portfolio-header {
+  padding: 120px 0;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-gallery img {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-gallery img:hover {
+  transform: scale(1.03);
+}
+.portfolio-section {
+  background-color: #f9f9f9;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/*Página Contacto*/
+
+.contacto-section {
+  background-color: #f9f9f9;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.uk-form-label {
+  font-weight: 600;
+}
+
+.uk-button-primary {
+  background-color: var(--primary-color);
+  border: none;
+}
